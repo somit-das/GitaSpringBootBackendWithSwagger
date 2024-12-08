@@ -20,9 +20,4 @@ public class ReadContentsController {
         return contentsService.getAllContent();
     }
 
-//    @PostMapping("/{name}")
-//    public Verse saveContent(@PathVariable String name, @RequestBody Verse verse) {
-//        versesService.saveChapterData(name, verse);
-//        return verse;
-//    }
 }

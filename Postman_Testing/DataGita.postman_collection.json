@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "82c1a6c4-a1db-42c9-b581-331d3193e56c",
+		"name": "DataGita",
+		"description": "A sample Api for retrieving data(chapters and verses) stored in local mongodb data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39087042"
+	},
+	"item": [
+		{
+			"name": "Get All Verses BY Chapter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chapter/{chapter_id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chapter",
+						"{chapter_id}"
+					]
+				},
+				"description": "it will get all verses with respoect to chapter."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Verses By Chapter Id and Verse Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chapter/{chapter_id}/{verse_number}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chapter",
+						"{chapter_id}",
+						"{verse_number}"
+					]
+				},
+				"description": "It will give verses by chapter Id and verse Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Verses Of Given Chapter with Pagination With Size",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chapter/group/{chapter_number}/?size={size}&page={page}&ascending=true&sortBy={verse_number}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chapter",
+						"group",
+						"{chapter_number}",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "{size}"
+						},
+						{
+							"key": "page",
+							"value": "{page}"
+						},
+						{
+							"key": "ascending",
+							"value": "true"
+						},
+						{
+							"key": "sortBy",
+							"value": "{verse_number}"
+						}
+					]
+				},
+				"description": "It will give verses by different query params"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contents of Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contents"
+					]
+				},
+				"description": "It will give all chapters and their description"
+			},
+			"response": []
+		}
+	]
+}

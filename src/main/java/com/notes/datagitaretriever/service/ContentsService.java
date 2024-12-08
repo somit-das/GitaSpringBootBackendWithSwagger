@@ -4,7 +4,6 @@ import com.notes.datagitaretriever.model.Contents;
 import com.notes.datagitaretriever.model.Verse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +18,7 @@ public class ContentsService {
         // Save data to a dynamically named collection
         mongoTemplate.save(verse, chapterName);
     }
+
 
     public List<Contents> getAllContent() {
         return mongoTemplate.findAll(Contents.class);
